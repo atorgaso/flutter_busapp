@@ -4,11 +4,13 @@ import 'package:flutter_busapp/utils/app_layout.dart';
 import 'package:flutter_busapp/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 
-class HotelScreen extends StatelessWidget {
-  const HotelScreen({super.key});
+class TransferScreen extends StatelessWidget {
+  final Map<String, dynamic> transfer;
+  const TransferScreen({super.key, required this.transfer});
 
   @override
   Widget build(BuildContext context) {
+    //print('Transfer price is ${transfer['price']}');
     final size = AppLayout.getSize(context);
 
     return Container(
@@ -34,23 +36,26 @@ class HotelScreen extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Styles.primaryColor,
-              image: const DecorationImage(
+              image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/images/one.jpg"))),
+                image: AssetImage(
+                  "assets/images/${transfer['image']}"),
+              ),
+            ),
           ),
           const Gap(10),
           Text(
-            "Open space",
+            transfer['name'],
             style: Styles.headLineStyle2.copyWith(color: Styles.kakiColor),
           ),
           const Gap(5),
           Text(
-            "Place",
+            '${transfer['from']} - ${transfer['to']}',
             style: Styles.headLineStyle3.copyWith(color: Colors.white),
           ),
           const Gap(5),
           Text(
-            "40",
+            '${transfer['price']}€',
             style: Styles.headLineStyle.copyWith(color: Colors.white),
           ),
         ],

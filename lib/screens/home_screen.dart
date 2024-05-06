@@ -1,7 +1,8 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_busapp/screens/hotels_screen.dart';
+import 'package:flutter_busapp/screens/transfer_screen.dart';
 import 'package:flutter_busapp/screens/ticket_view.dart';
+import 'package:flutter_busapp/utils/app_info_list.dart';
 import 'package:flutter_busapp/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 
@@ -105,10 +106,9 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
-            child: Row(children: [
-              TicketView(),
-              TicketView(),
-            ]),
+            child: Row(
+              children: ticketList.map((singleTicket) => TicketView(ticket: singleTicket)).toList(),
+            ),
           ),
           const Gap(15),
           Container(
@@ -117,7 +117,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Hotels",
+                  "Transfer",
                   style: Styles.headLineStyle2,
                 ),
                 InkWell(
@@ -137,12 +137,8 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
-            child: Row(children: [
-              HotelScreen(),
-              HotelScreen(),
-              HotelScreen(),
-              HotelScreen(),
-            ],
+            child: Row(
+              children: transferList.map((singleTransfer) => TransferScreen(transfer: singleTransfer)).toList(),
           ),
         ),
         ],
