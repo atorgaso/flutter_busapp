@@ -5,9 +5,11 @@ Color primary = const Color(0xFF687daf);
 class Styles {
   static Color primaryColor = primary;
   static Color textColor = const Color(0xFF3b3b3b);
-  static Color bgColor = const Color(0xFFeeedf2);
-  static Color blueColor = const Color(0xFF526799);
-  static Color orangeColor = const Color(0xFFF37B67);
+  static Color greyColor = const Color(0xff808080);
+  static Color bgColor = const Color(0xfff6f6e9);
+  static Color brownColor = const Color(0xff7b3911);
+  static Color secbrownColor = const Color(0xffb7937e);
+  static Color lightbrownColor = const Color(0xffcfb7a9);
   static Color kakiColor = const Color(0xFFd2bdb6);
   static TextStyle textStyle =
       TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);

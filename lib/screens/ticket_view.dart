@@ -23,7 +23,7 @@ class TicketView extends StatelessWidget {
             //showing the blue part of the ticket
             Container(
               decoration: BoxDecoration(
-                  color: Color(0xFF526799),
+                  color: Color(0xff884c28),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(AppLayout.getHeight(21)),
                     topRight: Radius.circular(AppLayout.getHeight(21)),
@@ -119,7 +119,7 @@ class TicketView extends StatelessWidget {
             ),
             //showing the orange part of the ticket
             Container(
-              color: Styles.orangeColor,
+              color: Styles.secbrownColor,
               child: Row(
                 children: [
                   SizedBox(
@@ -127,7 +127,7 @@ class TicketView extends StatelessWidget {
                     width: AppLayout.getWidth(10),
                     child: DecoratedBox(
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xfff6f6e9),
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(10),
                           bottomRight: Radius.circular(10),
@@ -152,7 +152,7 @@ class TicketView extends StatelessWidget {
                                 height: 1,
                                 child: DecoratedBox(
                                     decoration:
-                                        BoxDecoration(color: Colors.white)),
+                                        BoxDecoration(color: Color(0xfff6f6e9))),
                               ),
                             ),
                           );
@@ -165,7 +165,7 @@ class TicketView extends StatelessWidget {
                     width: 10,
                     child: DecoratedBox(
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xfff6f6e9),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10),
                           bottomLeft: Radius.circular(10),
@@ -179,7 +179,7 @@ class TicketView extends StatelessWidget {
             //bottom part of the orange ticket
             Container(
               decoration: BoxDecoration(
-                color: Styles.orangeColor,
+                color: Styles.secbrownColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(21),
                   bottomRight: Radius.circular(21),

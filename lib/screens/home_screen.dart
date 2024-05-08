@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_busapp/screens/news_screen.dart';
 import 'package:flutter_busapp/screens/transfer_screen.dart';
 import 'package:flutter_busapp/screens/ticket_view.dart';
 import 'package:flutter_busapp/utils/app_info_list.dart';
@@ -28,30 +29,32 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Good Day",
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.grey,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Gap(5),
-                        Text(
-                          "Book Tickets",
+                          "Hyvää päivää!",
                           style: TextStyle(
                               fontSize: 26,
                               color: Color(0xFF3b3b3b),
                               fontWeight: FontWeight.bold),
                         ),
+                        Gap(5),
+                        Text(
+                          "Anastassia",
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        
+                        
                       ],
                     ),
                     Container(
-                      height: 50,
-                      width: 50,
+                      height: 100,
+                      width: 100,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         image: const DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage("assets/images/bus_icon.png")),
+                            image: AssetImage("assets/images/application logo.png")),
                       ),
                     ),
                   ],
@@ -69,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       const Icon(
                         FluentSystemIcons.ic_fluent_search_regular,
-                        color: Color(0xFFBFC205),
+                        color: Color(0xff884c28),
                       ),
                       Text(
                         "Search",
@@ -94,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                       child: Text(
                         "View all",
                         style: Styles.textStyle
-                            .copyWith(color: Styles.primaryColor),
+                            .copyWith(color: Styles.greyColor),
                       ),
                     ),
                   ],
@@ -127,7 +130,7 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                     "View all",
                     style:
-                        Styles.textStyle.copyWith(color: Styles.primaryColor),
+                        Styles.textStyle.copyWith(color: Styles.greyColor),
                   ),
                 ),
               ],
@@ -141,6 +144,30 @@ class HomeScreen extends StatelessWidget {
               children: transferList.map((singleTransfer) => TransferScreen(transfer: singleTransfer)).toList(),
           ),
         ),
+        const Gap(40),
+        Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "News",
+                  style: Styles.headLineStyle2,
+                ),
+                InkWell(
+                  onTap: () {
+                    print("You are tapped");
+                  },
+                  child: Text(
+                    "View all",
+                    style:
+                        Styles.textStyle.copyWith(color: Styles.greyColor),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Gap(15),
         ],
       ),
     );
