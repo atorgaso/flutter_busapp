@@ -120,7 +120,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Transfer",
+                  "Discount offers",
                   style: Styles.headLineStyle2,
                 ),
                 InkWell(
